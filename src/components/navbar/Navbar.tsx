@@ -9,17 +9,26 @@ import { FiGithub } from "react-icons/fi";
 import logo from '../../assets/logo_dev.png'
 
 
-import React from 'react'
-
 
 
 const mainLinksMockdata = [
-    { icon: GrHomeRounded, label: 'GrHomeRounded' },
+    { icon: GrHomeRounded, label: 'Home' },
     { icon: GrUser, label: 'About' },
     { icon: GrTerminal, label: 'Projects' },
     { icon: GrDocumentText, label: 'Resume' },
     { icon: GrTask, label: 'Blog' },
     { icon: FiGithub, label: 'Git' },
+];
+
+
+const linksMockdata = [
+    'Home',
+    'About',
+    'Projects',
+    'Releases',
+    'Resume',
+    'Blog',
+    'Git'
 ];
 
 function Navbar() {
