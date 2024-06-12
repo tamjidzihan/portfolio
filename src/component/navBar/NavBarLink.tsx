@@ -14,7 +14,6 @@ const NavBarLink = ({ name, icon, href }: NavLinkProps) => (
         rounded={'md'}
         position="relative"
         display="inline-block"
-
         _hover={{
             textDecoration: 'none',
             _after: {

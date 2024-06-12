@@ -1,6 +1,7 @@
 import { Grid, GridItem } from '@chakra-ui/react'
 import './App.css'
-import NavBar from './component/NavBar'
+import NavBar from './component/navBar/NavBar'
+import Home from './component/home/home'
 
 function App() {
 
@@ -8,10 +9,10 @@ function App() {
   return (
     <>
       {/* ===== Grid Layout ===== */}
-      <Grid templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`
-      }}
+      <Grid templateAreas={
+        `"nav nav"
+        "main main"`
+      }
         templateColumns={{
           base: '1fr',
           lg: '260px'
@@ -27,14 +28,14 @@ function App() {
           backdropBlur="22px"
           boxShadow="md"
         >
-
           <NavBar />
-
         </GridItem>
 
+        <GridItem area='main'>
+          <Home />
+        </GridItem>
 
-
-      </Grid>
+      </Grid >
 
     </>
   )
