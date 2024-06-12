@@ -55,11 +55,12 @@ const Navbar = () => {
                     <MotionBox
                         pb={4}
                         display={{ sm: 'none' }}
+                        position='absolute'
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         transition={{ duration: 0.3 }}
                     >
-                        <Box pb={4} display={{ sm: 'none' }}>
+                        <Box pb={4} display={{ sm: 'none' }} position='absolute'>
                             <Stack as={'nav'} spacing={4}>
                                 {Links.map((link) => (
                                     <NavBarLink key={link.name} name={link.name} icon={link.icon} href={link.href} />
