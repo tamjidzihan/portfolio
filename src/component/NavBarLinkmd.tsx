@@ -1,20 +1,19 @@
-import { Link, Flex, Icon } from "@chakra-ui/react";
+import { Link, Flex, Icon, Box } from "@chakra-ui/react";
 import { FaHome } from "react-icons/fa";
 
-interface NavLinkProps {
+interface NavLinkPropsmd {
     name: string;
     icon: typeof FaHome;
     href: string
 }
 
-const NavBarLink = ({ name, icon, href }: NavLinkProps) => (
+const NavBarLinkMd = ({ name, icon, href }: NavLinkPropsmd) => (
     <Link
         px={2}
         py={1}
         rounded={'md'}
         position="relative"
         display="inline-block"
-
         _hover={{
             textDecoration: 'none',
             _after: {
@@ -34,11 +33,11 @@ const NavBarLink = ({ name, icon, href }: NavLinkProps) => (
             transition: 'width 0.6s ease-in-out',
         }}
         href={href}>
-        <Flex align="center" fontSize='xl'>
-            <Icon as={icon} mr={2} />
-            {name}
+        <Flex align="center" flexDirection='column'>
+            <Icon as={icon} />
+            <Box>{name}</Box>
         </Flex>
     </Link>
 );
 
-export default NavBarLink
+export default NavBarLinkMd
