@@ -18,7 +18,7 @@ const NavBarLink = ({ name, icon, href }: NavLinkProps) => (
             textDecoration: 'none',
             _after: {
                 width: '100%',
-                transition: 'width 0.6s ease-in-out',
+                transition: 'width 0.3s ease-in-out',
             }
         }}
         _after={{
@@ -30,7 +30,7 @@ const NavBarLink = ({ name, icon, href }: NavLinkProps) => (
             width: '0%',
             height: '4px',
             backgroundColor: 'blue.500',
-            transition: 'width 0.6s ease-in-out',
+            transition: 'width 0.3s ease-in-out',
         }}
         href={href}>
         <Flex align="center" fontSize='xl'>
