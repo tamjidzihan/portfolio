@@ -5,7 +5,7 @@ import profile from '../../assets/profile.svg';
 function Home2() {
     return (
         <Container maxW="container.xl" marginTop={200}>
-            <Flex justifyContent="space-between">
+            <Flex direction={{ base: 'column', md: 'row' }} justifyContent="space-between">
                 <Box flex="0 0 60%" >
                     <Heading fontSize="4xl" mb={4}>
                         LET ME
