@@ -1,12 +1,12 @@
 import { Box } from '@chakra-ui/react'
 import Hero from './Hero'
-import Home2 from './Home2'
+import Hero2 from './Hero2'
 
 const home = () => {
     return (
         <Box as="section">
             <Hero />
-            <Home2 />
+            <Hero2 />
         </Box >
     )
 }

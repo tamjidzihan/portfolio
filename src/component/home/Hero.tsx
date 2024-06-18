@@ -5,7 +5,7 @@ import Type from './Type'
 const Hero = () => {
     return (
 
-        <Box w="100%" id="home" position="relative" marginTop={200}>
+        <Box w="100%" id="home" position="relative" marginTop={150}>
             {/* <Particle /> */}
             <Container maxW="container.xl" py={8}>
                 <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="space-between">
@@ -27,7 +27,7 @@ const Hero = () => {
                             <Type />
                         </Box>
                     </Box>
-                    <Box flex="1" display="flex" justifyContent="center">
+                    <Box >
                         <Image src={heroImage} alt="home pic" maxH="450px" objectFit="cover" />
                     </Box>
                 </Flex>

@@ -1,4 +1,6 @@
 import { Box, Center, Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { GrGithub, GrTwitter, GrLinkedin, GrInstagram } from "react-icons/gr";
+
 import Tilt from 'react-parallax-tilt';
 import profile from '../../assets/profile.svg';
 
@@ -31,34 +33,35 @@ function Home2() {
                     </Tilt>
                 </Center >
             </Flex>
-            {/* <Box mt={12}>
+
+            <Center mt={12} flexDirection={'column'}>
                 <Heading mb={6}>FIND ME ON</Heading>
                 <Text>Feel free to <Text as="span" color="purple">connect</Text> with me</Text>
                 <Flex mt={4}>
                     <Box as="ul" listStyleType="none" p={0}>
                         <Box as="li" display="inline-block" mr={4}>
-                            <a href="https://github.com/soumyajit4419" target="_blank" rel="noreferrer" className="icon-colour home-social-icons">
-                                <AiFillGithub />
+                            <a href="#" target="_blank" rel="noreferrer" className="icon-colour home-social-icons">
+                                <GrGithub />
                             </a>
                         </Box>
                         <Box as="li" display="inline-block" mr={4}>
-                            <a href="https://twitter.com/Soumyajit4419" target="_blank" rel="noreferrer" className="icon-colour home-social-icons">
-                                <AiOutlineTwitter />
+                            <a href="#" target="_blank" rel="noreferrer" className="icon-colour home-social-icons">
+                                <GrTwitter />
                             </a>
                         </Box>
                         <Box as="li" display="inline-block" mr={4}>
-                            <a href="https://www.linkedin.com/in/soumyajit4419/" target="_blank" rel="noreferrer" className="icon-colour home-social-icons">
-                                <FaLinkedinIn />
+                            <a href="# " target="_blank" rel="noreferrer" className="icon-colour home-social-icons">
+                                <GrLinkedin />
                             </a>
                         </Box>
                         <Box as="li" display="inline-block">
-                            <a href="https://www.instagram.com/soumyajit4419" target="_blank" rel="noreferrer" className="icon-colour home-social-icons">
-                                <AiFillInstagram />
+                            <a href="#" target="_blank" rel="noreferrer" className="icon-colour home-social-icons">
+                                <GrInstagram />
                             </a>
                         </Box>
                     </Box>
                 </Flex>
-            </Box> */}
+            </Center>
 
         </Container>
     );

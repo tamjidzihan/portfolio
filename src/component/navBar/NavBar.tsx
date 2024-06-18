@@ -4,6 +4,7 @@ import { GrBlog, GrDocumentUser, GrHomeRounded, GrTerminal, GrUser } from "react
 import { motion } from 'framer-motion';
 import NavBarLink from './NavBarLink';
 import NavBarLinkMd from './NavBarLinkmd';
+import ColorModeSwitch from './ColorModeSwitch';
 
 const Links = [
     { name: 'Home', icon: GrHomeRounded, href: '#' },
@@ -31,12 +32,14 @@ const Navbar = () => {
                         {Links.map((link) => (
                             <NavBarLink key={link.name} name={link.name} icon={link.icon} href={link.href} />
                         ))}
+                        <ColorModeSwitch />
                     </HStack>
 
                     <HStack as={'nav'} spacing={4} display={displayValue} >
                         {Links.map((link) => (
                             <NavBarLinkMd key={link.name} name={link.name} icon={link.icon} href={link.href} />
                         ))}
+                        <ColorModeSwitch />
                     </HStack>
 
                     <IconButton
@@ -48,6 +51,7 @@ const Navbar = () => {
                         onClick={isOpen ? onClose : onOpen}
 
                     />
+
                 </Flex>
             </Box>
             {
