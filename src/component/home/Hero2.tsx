@@ -2,7 +2,8 @@ import { Box, Center, Container, Flex, Heading, Image, Text } from '@chakra-ui/r
 import { GrGithub, GrTwitter, GrLinkedin, GrInstagram } from "react-icons/gr";
 
 import Tilt from 'react-parallax-tilt';
-import profile from '../../assets/profile.svg';
+// import profile from '../../assets/profile.svg';
+import logo from '../../assets/logo_dev.png'
 
 function Home2() {
     return (
@@ -29,7 +30,7 @@ function Home2() {
                 </Box>
                 <Center flex="0 0 35%" >
                     <Tilt >
-                        <Image src={profile} boxSize='200px' alt="avatar" />
+                        <Image src={logo} boxSize='200px' alt="avatar" />
                     </Tilt>
                 </Center >
             </Flex>

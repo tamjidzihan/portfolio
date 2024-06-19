@@ -7,8 +7,8 @@ import NavBarLinkMd from './NavBarLinkmd';
 import ColorModeSwitch from './ColorModeSwitch';
 
 const Links = [
-    { name: 'Home', icon: GrHomeRounded, href: '#' },
-    { name: 'About', icon: GrUser, href: '#' },
+    { name: 'Home', icon: GrHomeRounded, href: '/' },
+    { name: 'About', icon: GrUser, href: '/about' },
     { name: 'Projects', icon: GrTerminal, href: '#' },
     { name: 'Resume', icon: GrDocumentUser, href: '#' },
     { name: 'Blogs', icon: GrBlog, href: '#' },
@@ -49,7 +49,6 @@ const Navbar = () => {
                         aria-label={'Open Menu'}
                         display={{ md: 'none' }}
                         onClick={isOpen ? onClose : onOpen}
-
                     />
 
                 </Flex>
@@ -58,13 +57,13 @@ const Navbar = () => {
                 isOpen ? (
                     <MotionBox
                         pb={4}
-                        display={{ sm: 'none' }}
-                        position='absolute'
+                        display={{ md: 'none' }}
+                        position='relative'
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         transition={{ duration: 0.3 }}
                     >
-                        <Box pb={4} display={{ sm: 'none' }} position='absolute'>
+                        <Box pb={4} display={{ md: 'none' }} position='relative'>
                             <Stack as={'nav'} spacing={4}>
                                 {Links.map((link) => (
                                     <NavBarLink key={link.name} name={link.name} icon={link.icon} href={link.href} />
