@@ -13,8 +13,8 @@ import {
     AiOutlineFundProjectionScreen,
     AiOutlineUser,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
+
 
 function NavBar() {
     const [expand, updateExpanded] = useState<any>(false);
@@ -39,7 +39,8 @@ function NavBar() {
         >
             <Container>
                 <Navbar.Brand href="/" className="d-flex">
-                    <img src={logo} className="img-fluid logo" alt="brand" />
+                    {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
+                    <strong className="navbar-logo"> Tz.</strong>
                 </Navbar.Brand>
                 <Navbar.Toggle
                     aria-controls="responsive-navbar-nav"

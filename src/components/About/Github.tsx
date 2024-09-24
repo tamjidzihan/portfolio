@@ -3,8 +3,8 @@ import GitHubCalendar from "react-github-calendar";
 function Github() {
 
   const theme = {
-    light: ['#ebedf0', '#c084f5'], // Light theme colors
-    dark: ['#333', '#c084f5'],     // Dark theme colors
+    // dark: ['#eae4f0', '#4a256b'],     // Dark theme colors
+    dark: ['#4a256b', '#eae4f0'],     // Dark theme colors
   };
 
   return (
@@ -17,7 +17,7 @@ function Github() {
         blockSize={15}
         blockMargin={5}
         fontSize={16}
-        theme={theme}
+        // theme={theme}
         style={{ margin: '0 auto' }}
       />
     </div>
