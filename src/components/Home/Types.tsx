@@ -1,4 +1,3 @@
-import React from "react";
 import Typewriter from "typewriter-effect";
 
 function Type() {
@@ -9,7 +8,7 @@ function Type() {
                     "Software Developer",
                     "Freelancer",
                     "MERN Stack Developer",
-                    "Open Source Contributor",
+                    "Python Developer",
                 ],
                 autoStart: true,
                 loop: true,

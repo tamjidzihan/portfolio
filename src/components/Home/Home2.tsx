@@ -1,13 +1,11 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
-import Tilt from "react-parallax-tilt";
+import { Col, Container, Row } from "react-bootstrap";
 import {
     AiFillGithub,
     AiOutlineTwitter,
-    AiFillInstagram,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import Tilt from "react-parallax-tilt";
+import myImg from "../../Assets/avatar.svg";
 
 function Home2() {
     return (
@@ -24,7 +22,7 @@ function Home2() {
                             <br />
                             <br />I am fluent in classics like
                             <i>
-                                <b className="purple"> C++, Javascript and Go. </b>
+                                <b className="purple">{" "}Javascript and Python. </b>
                             </i>
                             <br />
                             <br />
@@ -33,23 +31,23 @@ function Home2() {
                                 <b className="purple">Web Technologies and Products </b> and
                                 also in areas related to{" "}
                                 <b className="purple">
-                                    Blockchain.
+                                    API building.
                                 </b>
                             </i>
                             <br />
                             <br />
                             Whenever possible, I also apply my passion for developing products
-                            with <b className="purple">Node.js</b> and
+                            with <b className="purple">Node.js, Python</b> and
                             <i>
                                 <b className="purple">
-                                    {" "}
-                                    Modern Javascript Library and Frameworks
+                                    {" "} Modern Frameworks
                                 </b>
                             </i>
                             &nbsp; like
                             <i>
-                                <b className="purple"> React.js and Next.js</b>
+                                <b className="purple"> React.js, Next.js, Django, and FastAPI.</b>
                             </i>
+
                         </p>
                     </Col>
                     <Col md={4} className="myAvtar">
@@ -67,7 +65,7 @@ function Home2() {
                         <ul className="home-about-social-links">
                             <li className="social-icons">
                                 <a
-                                    href="https://github.com/soumyajit4419"
+                                    href="https://github.com/tamjidzihan"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="icon-colour  home-social-icons"
@@ -77,7 +75,7 @@ function Home2() {
                             </li>
                             <li className="social-icons">
                                 <a
-                                    href="https://twitter.com/Soumyajit4419"
+                                    href="https://x.com/tamjid_zihan"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="icon-colour  home-social-icons"
@@ -87,7 +85,7 @@ function Home2() {
                             </li>
                             <li className="social-icons">
                                 <a
-                                    href="https://www.linkedin.com/in/soumyajit4419/"
+                                    href="https://www.linkedin.com/in/md-tamzid-islam-03550aa9/"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="icon-colour  home-social-icons"
@@ -97,12 +95,12 @@ function Home2() {
                             </li>
                             <li className="social-icons">
                                 <a
-                                    href="https://www.instagram.com/soumyajit4419"
+                                    href="https://www.facebook.com/tamjid.zihan"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="icon-colour home-social-icons"
                                 >
-                                    <AiFillInstagram />
+                                    <FaFacebook />
                                 </a>
                             </li>
                         </ul>
