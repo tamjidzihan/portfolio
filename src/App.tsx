@@ -16,6 +16,7 @@ import {
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import PdfViewer from "./components/Resume/PDFview";
 
 const App: React.FC = () => {
   const [load, updateLoad] = useState<boolean>(true);
@@ -39,6 +40,7 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/pdfviewer" element={<PdfViewer />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
