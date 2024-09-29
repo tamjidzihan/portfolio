@@ -21,8 +21,6 @@ function ResumeNew() {
   return (
     <div>
       <Container fluid className="resume-section min-vh-100">
-        <p> {ver}
-        </p>
         {/* <Particle /> */}
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
