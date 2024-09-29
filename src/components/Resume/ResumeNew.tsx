@@ -6,7 +6,8 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import pdf from "../../Assets/../Assets/Tamzid_zihan.pdf"
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.worker.min.js`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
@@ -15,9 +16,13 @@ function ResumeNew() {
     setWidth(window.innerWidth);
   }, []);
 
+  const ver = pdfjs.version
+
   return (
     <div>
       <Container fluid className="resume-section min-vh-100">
+        <p> {ver}
+        </p>
         {/* <Particle /> */}
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button

@@ -1,41 +1,36 @@
 import { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import pdfFile from '../../Assets/Tamzid_zihan.pdf'; // Import your PDF file
+import { Document, Page } from 'react-pdf';
+import pdf from "../../Assets/Tamzid_zihan.pdf";
 import { Container } from 'react-bootstrap';
+import { pdfjs } from 'react-pdf';
 
-// Set the workerSrc to properly load the PDF worker
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.mjs',
+    import.meta.url,
+).toString();
 
-const PdfViewer: React.FC = () => {
-    const [numPages, setNumPages] = useState<number | null>(null);
+function pdfViewer() {
+    const [numPages, setNumPages] = useState<number>();
     const [pageNumber, setPageNumber] = useState<number>(1);
 
-    const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
+    function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
         setNumPages(numPages);
-    };
+    }
 
     return (
-        <div >
+        <div>
             <Container fluid className="resume-section min-vh-100">
-                <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
+                <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
                     <Page pageNumber={pageNumber} />
                 </Document>
-                <div>
-                    <p>
-                        Page {pageNumber} of {numPages}
-                    </p>
-                    <button disabled={pageNumber <= 1} onClick={() => setPageNumber(pageNumber - 1)}>
-                        Previous
-                    </button>
-                    <button disabled={pageNumber >= (numPages || 1)} onClick={() => setPageNumber(pageNumber + 1)}>
-                        Next
-                    </button>
-                </div>
+                <p>
+                    Page {pageNumber} of {numPages}
+                </p>
             </Container>
+
         </div>
-
     );
-};
+}
 
-export default PdfViewer;
+
+export default pdfViewer;
