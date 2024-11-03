@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
               description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
               // ghLink="https://github.com/soumyajit4419/Chatify"
               ghLink="https://github.com/tamjidzihan"
-              demoLink="https://chatify-49.web.app/"
+              demoLink="https://demo.web.app/"
             />
           </Col>
 
@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
               description="My personal blog page build with Next.js and Tailwind Css which takes the content from markdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
               ghLink="https://github.com/tamjidzihan"
               // ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              demoLink="https://demo.web.app/"
             />
           </Col>
 
@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
               description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview. Both the editor supports auto save of work using Local Storage"
               ghLink="https://github.com/tamjidzihan"
               // ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"
+              demoLink="https://demo.web.app/"
             />
           </Col>
 
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
               description="Used the plant disease dataset from Kaggle and trained an image classifier model using 'PyTorch' framework with CNN and Transfer Learning. The model successfully detected diseased and healthy leaves of 14 unique plants. Achieved 98% accuracy using the Resnet34 pretrained model."
               ghLink="https://github.com/tamjidzihan"
               // ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              demoLink="https://demo.web.app/"
             />
           </Col>
 
@@ -88,8 +88,9 @@ const Projects: React.FC = () => {
               title="Face Recognition and Emotion Detection"
               description="Trained a CNN classifier using the 'FER-2013 dataset' with Keras and TensorFlow. Successfully predicted different types of human emotions. Achieved 60.1% accuracy. Used Open-CV to detect faces in images and passed the face to the classifier to predict the emotion."
               ghLink="https://github.com/tamjidzihan"
-            // ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-            // demoLink="<Include a demo link here>"
+              // ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+              // demoLink="<Include a demo link here>"
+              demoLink="https://demo.web.app/"
             />
           </Col>
         </Row>
