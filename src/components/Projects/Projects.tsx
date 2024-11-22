@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
             <ProjectCard
               imgPath={ztext}
               isBlog={false}
-              title="Ztext"
+              title="Auth manager"
               description="Building a modern password management web app with React, Vite, TypeScript, Material UI, and Firebase Firestore as the backend. It ensures secure storage, retrieval, and management of sensitive user credentials."
               ghLink="https://github.com/tamjidzihan/ztext"
               demoLink="https://ztext.netlify.app/"
@@ -61,11 +61,12 @@ const Projects: React.FC = () => {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained an image classifier model using 'PyTorch' framework with CNN and Transfer Learning. The model successfully detected diseased and healthy leaves of 14 unique plants. Achieved 98% accuracy using the Resnet34 pretrained model."
-              ghLink="https://github.com/tamjidzihan"
+              title="Text AI"
+              description="A text file translation microservice using FastAPI. This service will allow users to upload a text file, select a target language, and download a translated file. Use WebSocket for real-time status updates, background tasks for processing, MongoDB Atlas to save user history, and an LLM API (e.g., Gemini, free tier) for translation.
+"
+              ghLink="https://github.com/tamjidzihan/translation-microservice"
               // ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://demo.web.app/"
+              demoLink="https://translation-microservice.onrender.com/"
             />
           </Col>
 
