@@ -7,7 +7,7 @@ import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import bytebybyte from "../../Assets/Projects/blog.png";
 
 const Projects: React.FC = () => {
   return (
@@ -35,13 +35,12 @@ const Projects: React.FC = () => {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={bytebybyte}
               isBlog={false}
-              title="Bits-0f-C0de"
+              title="Byte-by-Byte"
               description="My personal blog page build with Next.js and Tailwind Css which takes the content from markdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/tamjidzihan"
-              // ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://demo.web.app/"
+              ghLink="https://github.com/tamjidzihan/byte_by_byte"
+              demoLink="https://bytebybyteblog.vercel.app/"
             />
           </Col>
 
