@@ -6,7 +6,7 @@ import ztext from "../../Assets//Projects/ztext.png"
 import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
 import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
+import store_Front from "../../Assets/Projects/store_Front.png"
 import bytebybyte from "../../Assets/Projects/blog.png";
 
 const Projects: React.FC = () => {
@@ -71,12 +71,11 @@ const Projects: React.FC = () => {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={store_Front}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Language Processing' for detecting suicide-related posts and identifying users' suicide ideation in cyberspace, aiding in suicide prevention."
-              ghLink="https://github.com/tamjidzihan"
-            // ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
+              title="StoreFront: Scalable E-Commerce Backend"
+              description="A robust Django backend with JWT authentication, API support, and scalable architecture for managing products, orders, and users. 🚀#Django #Ecommerce #RESTAPI #JWT #Backend"
+              ghLink="https://github.com/tamjidzihan/Store_Front_django"
             // demoLink="<Include a demo link here>"
             />
           </Col>
