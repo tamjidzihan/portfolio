@@ -4,7 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { quickFacts, stats, personalInfo } from '@/data';
+import { quickFacts, stats, personalInfo, links, featuredprojects } from '@/data';
+import AnimatedBackground from '@/components/common/AnimatedBackground';
 
 const Home = () => {
 
@@ -13,29 +14,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20">
-          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-primary/30 rounded-full"
-              initial={{
-                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-                y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)
-              }}
-              animate={{
-                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-                y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
-              }}
-              transition={{
-                duration: 20 + Math.random() * 10,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "linear"
-              }}
-            />
-          ))}
-        </div>
+        <AnimatedBackground />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -75,7 +54,7 @@ const Home = () => {
                   transition={{ delay: 0.4 }}
                   className="space-y-2"
                 >
-                  <h2 className="text-2xl sm:text-3xl font-semibold text-muted-foreground">
+                  <h2 className="text-2xl sm:text-3xl font-semibold  text-muted-foreground">
                     {personalInfo.occupation}
                   </h2>
                   <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
@@ -126,11 +105,7 @@ const Home = () => {
                 transition={{ delay: 0.7 }}
                 className="flex items-center gap-4"
               >
-                {[
-                  { icon: Github, href: 'https://github.com/tamzid-islam', label: 'GitHub' },
-                  { icon: Linkedin, href: 'https://linkedin.com/in/tamjid-islam', label: 'LinkedIn' },
-                  { icon: Mail, href: 'mailto:tamjidzihan@gmail.com', label: 'Email' }
-                ].map((social, index) => {
+                {links.map((social, index) => {
                   const Icon = social.icon;
                   return (
                     <motion.a
@@ -164,17 +139,17 @@ const Home = () => {
                     <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-4xl font-bold text-white overflow-hidden">
                       <img
                         src={personalInfo.profilepic}
-                        alt='MD. MUSTAFIZUR RAHMAN'
+                        alt={personalInfo.fullName}
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold">Md. Tamzid Islam</h3>
-                      <p className="text-muted-foreground">Full-Stack Developer</p>
+                      <h3 className="text-xl font-semibold"> {personalInfo.fullName}</h3>
+                      <p className="text-muted-foreground text-indigo-600 dark:text-indigo-400 "> {personalInfo.occupation}</p>
                     </div>
-                    <div className="flex justify-center gap-2">
+                    <Link to={'/resume'} className="flex justify-center gap-2">
                       <Badge variant="default">Available for Work</Badge>
-                    </div>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -210,13 +185,15 @@ const Home = () => {
                     Currently Working On
                   </h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Building scalable web applications with React & TypeScript</li>
-                    <li>• Exploring Go for backend development</li>
-                    <li>• Contributing to open-source projects</li>
-                    <li>• Learning cloud architecture patterns</li>
+                    <li>• Building <span className="font-medium">Byte-by-Byte</span>, a tech blog using Next.js, TypeScript & Tailwind</li>
+                    <li>• Developing <span className="font-medium">Storefront</span>, an e-commerce backend with Django REST & PostgreSQL</li>
+                    <li>• Freelance projects with React, Vite, TypeScript, and Firebase</li>
+                    <li>• Exploring cloud deployment & CI/CD workflows (GitHub Actions, VPS hosting)</li>
+                    <li>• Learning advanced system design & scalable backend patterns</li>
                   </ul>
                 </CardContent>
               </Card>
+
             </motion.div>
           </div>
         </div>
@@ -238,11 +215,7 @@ const Home = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { name: "Munemi Global", tech: "React + Node.js", type: "Business Platform" },
-              { name: "Imranslab LMS", tech: "React + Django", type: "Education System" },
-              { name: "Portfolio Site", tech: "React + TypeScript", type: "Personal Brand" }
-            ].map((project, index) => (
+            {featuredprojects.map((project, index) => (
               <motion.div
                 key={project.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -254,7 +227,14 @@ const Home = () => {
                 <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300 group">
                   <CardContent className="p-6">
                     <div className="h-40 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg mb-4 flex items-center justify-center">
-                      <Code2 className="h-16 w-16 text-primary/40" />
+                      {project.image
+                        ? <img
+                          src={project.image}
+                          alt={project.name}
+                          className="w-full h-full object-cover"
+                        />
+                        : <Code2 className="h-16 w-16 text-primary/40" />
+                      }
                     </div>
                     <h3 className="font-semibold mb-2">{project.name}</h3>
                     <p className="text-sm text-muted-foreground mb-3">{project.type}</p>

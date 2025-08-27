@@ -1,11 +1,46 @@
-import { Coffee, Code2, Sparkles, Award, Code, Database, Heart, Server, Smartphone, Target, Users } from 'lucide-react';
-import pic from '../../public/tamzidislam.jpg'
+import { Coffee, Code2, Sparkles, Award, Code, Database, Heart, Server, Smartphone, Target, Users, Github, Linkedin, Mail, Globe } from 'lucide-react';
+import pic from '/tamzidislam.jpg'
+import blog from '/blog.png'
+import imranslablms from '/imranslablms.png'
+import munemi from '/munemi.png'
 
 export const stats = [
     { label: "Years Experience", value: "3+", icon: Code2 },
     { label: "Projects Completed", value: "20+", icon: Sparkles },
     { label: "Technologies", value: "15+", icon: Coffee },
 ];
+
+export const links = [
+    { icon: Github, href: "https://github.com/tamjidzihan", label: 'GitHub' },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/tamzid-islam/", label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:tamjidzihan@gmail.com', label: 'Email' }
+]
+
+
+export const contactLinks = [
+    {
+        icon: Mail,
+        label: 'Email',
+        href: 'mailto:tamjidzihan@gmail.com',
+        text: 'tamjidzihan@gmail.com'
+    },
+    {
+        icon: Linkedin,
+        label: 'LinkedIn',
+        href: "https://www.linkedin.com/in/tamzid-islam/",
+        text: 'linkedin.com/in/tamjid-islam'
+    },
+    {
+        icon: Globe,
+        label: 'Portfolio',
+        href: 'https://tizdev.netlify.app',
+        text: 'tizdev.netlify.app'
+    }
+];
+
+
+
+
 
 export const quickFacts = [
     "🚀 Full-Stack Developer",
@@ -26,6 +61,14 @@ export const personalInfo = {
     hobbies: ["Photography", "Reading Tech Blogs", "Playing Chess", "Traveling"],
     careerobjective: "I craft digital experiences through code, specializing in modern web technologies. Passionate about building scalable applications that make a difference."
 };
+
+
+export const featuredprojects = [
+    { name: "Munemi Global", image: munemi, tech: "React + Node.js", type: "Business Platform" },
+    { name: "Imranslab LMS", image: imranslablms, tech: "React + Django", type: "Education System" },
+    { name: "Byte-by-Byte", image: blog, tech: "Next + TypeScript", type: "Personal Blog" }
+]
+
 
 export const skills = [
     {

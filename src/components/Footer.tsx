@@ -1,30 +1,12 @@
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Globe, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { contactLinks } from '@/data';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const contactLinks = [
-    {
-      icon: Mail,
-      label: 'Email',
-      href: 'mailto:tamjidzihan@gmail.com',
-      text: 'tamjidzihan@gmail.com'
-    },
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      href: 'https://linkedin.com/in/tamjid-islam',
-      text: 'linkedin.com/in/tamjid-islam'
-    },
-    {
-      icon: Globe,
-      label: 'Portfolio',
-      href: 'https://tizdev.netlify.app',
-      text: 'tizdev.netlify.app'
-    }
-  ];
+
 
   return (
     <footer className="bg-background/50 backdrop-blur-sm border-t border-border">
@@ -89,7 +71,7 @@ const Footer = () => {
             className="border-t border-border pt-8"
           >
             <p className="text-muted-foreground flex items-center justify-center gap-1">
-              © {currentYear} Md. Tamzid Islam. Made with <Heart className="h-4 w-4 text-red-500" /> using React & TypeScript
+              © {currentYear} Md. Tamzid Islam. Made with <Heart className="h-4 w-4 text-red-500" />
             </p>
           </motion.div>
         </div>

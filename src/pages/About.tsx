@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { personalInfo, achievements, timeline, skills } from '@/data';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const About = () => {
   const containerVariants = {
@@ -52,7 +53,11 @@ const About = () => {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold">
-                      TI
+                      <Avatar>
+                        <AvatarImage src={personalInfo.profilepic} alt="@tamjidzihan" />
+                        <AvatarFallback>TI</AvatarFallback>
+                      </Avatar>
+
                     </div>
                     Personal Details
                   </CardTitle>
@@ -102,23 +107,25 @@ const About = () => {
               <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-2xl">My Journey</CardTitle>
-                  <CardDescription>From curiosity to expertise</CardDescription>
+                  <CardDescription>From curiosity to building impactful solutions</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">
-                    My journey into software development began with a simple curiosity about how websites work.
-                    What started as tinkering with HTML and CSS quickly evolved into a deep passion for creating
-                    digital solutions that solve real-world problems.
+                    My journey into software development started with curiosity—experimenting with simple HTML & CSS to
+                    understand how the web worked. That spark quickly grew into a passion for solving problems through code
+                    and building digital experiences that people can actually use.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    Over the years, I've had the privilege of working on diverse projects - from small business
-                    websites to complex enterprise applications. Each project has taught me something new and
-                    reinforced my belief that great software is built through continuous learning and collaboration.
+                    Over time, I’ve worked on projects ranging from <span className="font-medium">freelance websites</span> for
+                    small businesses to more ambitious applications like <span className="font-medium">Byte-by-Byte</span>, a
+                    tech blog built with Next.js, and <span className="font-medium">Storefront</span>, an e-commerce backend
+                    powered by Django REST and PostgreSQL. These experiences have strengthened my skills in React,
+                    TypeScript, backend development, and cloud deployment.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    When I'm not coding, you'll find me exploring new technologies, contributing to open-source
-                    projects, or sharing knowledge with the developer community. I believe in the power of
-                    technology to make the world a better place, one line of code at a time.
+                    Beyond coding, I love exploring new technologies, contributing to open-source, and sharing knowledge
+                    with other developers. For me, building software isn’t just about writing code—it’s about continuous
+                    learning, collaboration, and using technology to make a positive impact.
                   </p>
                 </CardContent>
               </Card>
