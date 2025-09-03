@@ -1,9 +1,21 @@
-import { motion } from 'framer-motion';
-import { Download, FileText, Mail, Linkedin, Github } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { resumeData } from '@/data';
+import { motion } from 'framer-motion';
+import { Download, Github, Linkedin, Mail } from 'lucide-react';
+
+import { Document, Page, pdfjs } from "react-pdf";
+
+import { useEffect, useRef, useState } from 'react';
+import "../styles/pdf.css";
+
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url
+).toString();
+
 
 const Resume = () => {
   const containerVariants = {
@@ -25,6 +37,24 @@ const Resume = () => {
     }
   };
 
+
+  const [width, setWidth] = useState(600); // default width
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (containerRef.current) {
+        setWidth(containerRef.current.offsetWidth);
+      }
+    };
+
+    handleResize(); // set initial width
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
   return (
     <div className="min-h-screen py-20 bg-gradient-to-br from-background via-background to-primary/5">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,9 +73,9 @@ const Resume = () => {
               Download my resume or view it online
             </p>
             <Button asChild size="lg" className="mb-8">
-              <a href="#" download className="flex items-center gap-2">
+              <a href={resumeData.personalInfo.resume} target="_blank" download className="flex items-center gap-2">
                 <Download className="h-4 w-4" />
-                Download PDF Resume
+                &nbsp;Download PDF Resume
               </a>
             </Button>
           </motion.div>
@@ -70,9 +100,9 @@ const Resume = () => {
                     </a>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <FileText className="h-4 w-4" />
-                    <a href={`https://${resumeData.personalInfo.portfolio}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary">
-                      {resumeData.personalInfo.portfolio}
+                    <Github className="h-4 w-4" />
+                    <a href={`https://${resumeData.personalInfo.github}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+                      {resumeData.personalInfo.github}
                     </a>
                   </div>
                 </div>
@@ -168,19 +198,19 @@ const Resume = () => {
               <CardHeader>
                 <CardTitle>Resume Preview</CardTitle>
                 <CardDescription>
-                  A PDF version of my resume will be displayed here when uploaded
+                  View a live PDF version of my resume below
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="aspect-[8.5/11] bg-muted/20 border-2 border-dashed border-border rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <FileText className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                    <p className="text-muted-foreground">PDF Resume Preview</p>
-                  </div>
+                <div ref={containerRef} className="aspect-[8.5/11] border border-border rounded-lg overflow-hidden flex items-center justify-center">
+                  <Document file={resumeData.personalInfo.resume}>
+                    <Page pageNumber={1} width={width} />
+                  </Document>
                 </div>
               </CardContent>
             </Card>
           </motion.div>
+
         </motion.div>
       </div>
     </div>

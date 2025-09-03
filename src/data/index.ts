@@ -3,6 +3,9 @@ import profilePic from '/tamzidislam.jpg'
 import blog from '/blog.png'
 import imranslablms from '/imranslablms.png'
 import munemi from '/munemi.png'
+import beakling from '/beakling.png'
+import resume from '../Assets/MD.Tamzid_Islam.pdf'
+
 
 export const stats = [
     { label: "Years Experience", value: "3+", icon: Code2 },
@@ -14,7 +17,7 @@ export const links = [
     { icon: Github, href: "https://github.com/tamjidzihan", label: 'GitHub' },
     { icon: Linkedin, href: "https://www.linkedin.com/in/tamzid-islam/", label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:tamjidzihan@gmail.com', label: 'Email' }
-]
+];
 
 
 export const contactLinks = [
@@ -194,8 +197,8 @@ export const projects = [
         team: "Solo Project",
         technologies: {
             frontend: ["React", "TypeScript", "Tailwind CSS", "Axios", "React Router DOM", "Framer Motion"],
-            backend: ["Express.js", "Node.js", "MongoDB", "JWT", "Bcrypt"],
-            tools: ["Git", "VS Code", "Postman", "MongoDB Compass"]
+            backend: ["Express.js", "Node.js", "MySQL", "JWT", "Bcrypt"],
+            tools: ["Git", "VS Code", "Postman", "PHP SQL"]
         },
         features: [
             "Responsive design across all devices",
@@ -216,7 +219,7 @@ export const projects = [
             "Zero security vulnerabilities"
         ],
         link: "https://www.munemiglobal.com",
-        github: "#",
+        github: "https://github.com/tamjidzihan",
         featured: true
     },
     {
@@ -227,7 +230,7 @@ export const projects = [
         image: imranslablms,
         category: "Education Technology",
         status: "Live",
-        year: "2024",
+        year: "2025",
         duration: "8 months",
         team: "2 Developers",
         technologies: {
@@ -254,7 +257,7 @@ export const projects = [
             "60% reduction in administrative workload"
         ],
         link: "https://education.imranslab.org",
-        github: "#",
+        github: "https://github.com/imranslab-inc/bedrock/tree/imranslab-edu",
         featured: true
     },
     {
@@ -269,8 +272,8 @@ export const projects = [
         duration: "4 months",
         team: "Lead Developer",
         technologies: {
-            frontend: ["React", "TypeScript", "Monaco Editor", "Socket.io Client", "Tailwind CSS"],
-            backend: ["Node.js", "Express", "Socket.io", "Redis", "PostgreSQL"],
+            frontend: ["Next", "React", "TypeScript", "Tailwind CSS"],
+            backend: ["Node.js", "MarkDown"],
             tools: ["Docker", "Jest", "Webpack", "NGINX"]
         },
         features: [
@@ -298,43 +301,43 @@ export const projects = [
     {
         id: 4,
         title: "Beakling",
-        shortDescription: "AI-powered language learning app with speech recognition",
-        fullDescription: "Beakling is a modern language learning application that uses AI and speech recognition to help users master new languages. Features personalized learning paths, pronunciation feedback, and immersive conversational practice.",
-        image: "/api/placeholder/600/400",
-        category: "EdTech",
-        status: "Live",
-        year: "2024",
-        duration: "5 months",
+        shortDescription: "Curated e-commerce platform for children's books, toys, and learning products",
+        fullDescription: "Beakling is a modern e-commerce platform dedicated to fostering imagination and learning in children. It offers curated collections of eBooks, innovative toys, and enriching child-friendly products. The platform focuses on high-quality offerings, expert guidance, and a seamless shopping experience for parents and kids alike.",
+        image: beakling,
+        category: "E-commerce",
+        status: "Default",
+        year: "2025",
+        duration: "6 months",
         team: "Full-stack Developer",
         technologies: {
-            frontend: ["Vue.js", "Vuetify", "Web Speech API", "Wave.js"],
-            backend: ["Python", "FastAPI", "OpenAI API", "MongoDB", "Celery"],
-            tools: ["Docker", "Kubernetes", "GCP", "GitLab CI/CD"]
+            frontend: ["React", "Typescript", "Tailwind CSS", "React Router Dom", "Framer Motion"],
+            backend: ["Django", "Django REST framework", "PostgresSQL"],
+            tools: ["Vercel", "GitHub Actions", "Cloudinary"]
         },
         features: [
-            "Real-time speech recognition and feedback",
-            "AI-powered conversation practice",
-            "Personalized learning curriculum",
-            "Progress analytics and insights",
-            "Multi-language support (8 languages)",
-            "Mobile-responsive design"
+            "Curated eBook and toy collections",
+            "Personalized product recommendations",
+            "Wishlist and gift features",
+            "Secure checkout and payment integration",
+            "Responsive and mobile-friendly design",
+            "SEO-optimized product catalog"
         ],
         challenges: [
-            "Integrating multiple speech recognition APIs",
-            "Reducing latency in real-time audio processing",
-            "Creating accurate pronunciation scoring algorithms"
+            "Building a scalable product catalog system",
+            "Ensuring smooth checkout and payment flow",
+            "Managing placeholder-to-production content migration"
         ],
         results: [
-            "10,000+ registered users",
-            "40% improvement in learning efficiency",
-            "4.8/5 app store rating"
+            "Successfully launched live e-commerce site",
+            "Improved user engagement with curated recommendations",
+            "Established brand presence across social media platforms"
         ],
-        link: "https://beakling.com",
+        link: "https://www.beakling.com",
         github: "#",
         featured: false
-    },
-];
+    }
 
+];
 
 
 export const resumeData = {
@@ -342,30 +345,43 @@ export const resumeData = {
         name: "Md. Tamzid Islam",
         title: "Software Engineer",
         email: "tamjidzihan@gmail.com",
-        linkedin: "linkedin.com/in/tamjid-islam",
-        portfolio: "tizdev.netlify.app"
+        linkedin: "www.linkedin.com/in/tamzid-islam",
+        github: "https://github.com/tamjidzihan",
+        resume: resume
     },
     experience: [
         {
-            title: "Full Stack Developer",
-            company: "Freelance",
-            period: "2022 - Present",
+            title: "Software Engineer",
+            company: "imransLab",
+            period: "2025 - Present",
+            description: "Developed and maintained web applications using React, TypeScript, Python, and modern cloud technologies."
+        },
+        {
+            title: "Junior Web Developer",
+            company: "Wreef Ai",
+            period: "2023 - 2024",
+            description: "Developed and maintained web applications using React, TypeScript, Python, and modern cloud technologies."
+        },
+        {
+            title: "Freelance",
+            company: "Up Work, Fiver",
+            period: "2022 - 2023",
             description: "Developed and maintained web applications using React, TypeScript, Python, and modern cloud technologies."
         }
     ],
     education: [
         {
-            degree: "Computer Science & Engineering",
-            institution: "University",
-            period: "2020 - 2024",
-            description: "Focused on software engineering, algorithms, and modern web technologies."
+            degree: "Electronics And Communication Engineering",
+            institution: "East West Unibersity",
+            period: "2011 - 2015",
+            description: "Focused on networking, algorithms, and modern web technologies."
         }
     ],
     skills: {
         "Programming Languages": ["JavaScript", "TypeScript", "Python", "Go", "SQL"],
         "Frontend Technologies": ["React", "Next.js", "Tailwind CSS", "HTML/CSS"],
         "Backend Technologies": ["Django", "FastAPI", "Node.js", "Express.js"],
-        "Databases": ["PostgreSQL", "MongoDB", "Redis"],
+        "Databases": ["PostgreSQL", "MongoDB", "MySQL"],
         "Cloud & DevOps": ["AWS", "Docker", "Git", "Linux"]
     }
 };
@@ -375,56 +391,60 @@ export const resumeData = {
 export const blogPosts = [
     {
         id: 1,
-        title: "Building Scalable React Applications with TypeScript",
-        excerpt: "Learn how to structure large React applications using TypeScript, implementing best practices for maintainability and performance.",
-        date: "2024-01-15",
-        readTime: "8 min read",
-        tags: ["React", "TypeScript", "Best Practices"],
+        title: "The Rise of Edge Computing and Its Impact on Modern Technology",
+        excerpt: "React, developed by Facebook (now Meta) in 2013, has become one of the most popular libraries for building user interfaces. Its component-based architecture, performance optimizations, and strong community support make it an excellent choice for modern web development.",
+        date: "2024-12-11",
+        readTime: "5 min read",
+        link: "https://bytebybyteblog.vercel.app/blogs/the-rise-of-edge-computing-and-its-impact-on-modern-technology",
+        tags: ["React", "TypeScript", "Web Development"],
         published: true
     },
     {
         id: 2,
-        title: "Mastering Django REST Framework for Modern APIs",
-        excerpt: "A comprehensive guide to building robust APIs with Django REST Framework, covering authentication, serialization, and optimization.",
+        title: "Understanding AI LLM and Machine Learning",
+        excerpt: "Artificial Intelligence (AI), Machine Learning (ML), and Large Language Models (LLM) are rapidly evolving fields that are shaping the future of technology.",
         date: "2024-01-02",
         readTime: "12 min read",
-        tags: ["Django", "Python", "API", "Backend"],
+        link: "https://bytebybyteblog.vercel.app/blogs/understanding-ai-llm-and-machine-learning",
+        tags: ["Artificial", "Intelligence", "Machine learning", "models"],
         published: true
     },
     {
         id: 3,
-        title: "Cloud Deployment Strategies with AWS and Docker",
-        excerpt: "Explore different approaches to deploying containerized applications on AWS, with practical examples and cost optimization tips.",
-        date: "2023-12-20",
+        title: "Server-Side Rendering (SSR) vs. Client-Side Rendering (CSR) in Next.js",
+        excerpt: "Server-Side Rendering is a technique where the server generates the full HTML content of a page at request time and sends it to the client. This allows for better SEO and faster page loads for the initial visit since the content is rendered on the server.",
+        date: "2024-12-20",
         readTime: "10 min read",
+        link: "https://bytebybyteblog.vercel.app/blogs/server-side-rendering-(ssr)-vs.-client-side-rendering-(csr)-in-next.js",
         tags: ["AWS", "Docker", "DevOps", "Cloud"],
         published: true
     },
     {
         id: 4,
-        title: "Modern State Management in React Applications",
-        excerpt: "Compare different state management solutions for React, from Context API to Redux Toolkit and Zustand.",
-        date: "2023-12-08",
+        title: "DeepSeek Breaking the AI Monopoly",
+        excerpt: "The AI landscape is shifting rapidly, and at the forefront of this change is DeepSeek. You’ve probably heard about it, seen it mentioned in tech circles,",
+        date: "2024-12-08",
         readTime: "6 min read",
-        tags: ["React", "State Management", "Redux"],
+        link: "https://bytebybyteblog.vercel.app/blogs/deepseek-breaking-the-ai-monopoly",
+        tags: ["ai", "Deep Learning", "Open Source"],
         published: true
     },
     {
         id: 5,
-        title: "Getting Started with Go for Backend Development",
-        excerpt: "An introduction to Go programming language for backend developers, covering basics, web frameworks, and database integration.",
-        date: "2023-11-25",
+        title: "8 Frontend Tools to Become a Better Developer",
+        excerpt: "As the web development field continues to evolve, front-end developers are constantly looking for tools that can streamline their workflows, enhance productivity, and ensure the delivery of high-quality applications.",
+        date: "2024-01-25",
         readTime: "15 min read",
-        tags: ["Go", "Backend", "Web Development"],
+        tags: ["Webdev", "llm", "Programming"],
         published: false
     },
     {
         id: 6,
-        title: "Database Design Patterns for Modern Applications",
-        excerpt: "Essential database design patterns and when to use them, with examples in PostgreSQL and MongoDB.",
+        title: "Deno 2 The Next Evolution in JavaScript Runtimes. Is It Better Than Nodejs.",
+        excerpt: "Since its release in 2020, Deno has emerged as a promising alternative to Node.js, aiming to fix many of its predecessor's limitations.",
         date: "2023-11-10",
         readTime: "9 min read",
-        tags: ["Database", "PostgreSQL", "MongoDB", "Design Patterns"],
+        tags: ["Javascript", "Deno", "Node.js", "Development"],
         published: false
     }
 ];

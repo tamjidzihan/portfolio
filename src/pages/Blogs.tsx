@@ -127,10 +127,12 @@ const Blogs = () => {
                         ))}
                       </div>
 
-                      <Button variant="ghost" className="w-full group/btn">
-                        Read More
-                        <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                      </Button>
+                      <a href={post.link} target='_blank'>
+                        <Button variant="ghost" className="w-full group/btn">
+                          <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                          Read More
+                        </Button>
+                      </a>
                     </CardContent>
                   </Card>
                 </motion.div>

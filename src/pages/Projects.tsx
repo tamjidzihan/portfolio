@@ -279,7 +279,7 @@ const Projects = () => {
                         </div>
                       </div>
                       <div className="absolute top-4 left-4">
-                        <Badge variant="outline">{project.category}</Badge>
+                        <Badge className=' bg-white' variant="outline">{project.category}</Badge>
                       </div>
                     </div>
 
