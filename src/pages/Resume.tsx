@@ -8,7 +8,6 @@ import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import { Document, Page, pdfjs } from "react-pdf";
 
 import { useEffect, useRef, useState } from 'react';
-import "../styles/pdf.css";
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
