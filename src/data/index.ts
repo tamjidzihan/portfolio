@@ -1,5 +1,5 @@
-import { Coffee, Code2, Sparkles, Award, Code, Database, Heart, Server, Smartphone, Target, Users, Github, Linkedin, Mail, Globe } from 'lucide-react';
-import pic from '/tamzidislam.jpg'
+import { Coffee, Code2, Sparkles, Award, Code, Database, Heart, Server, Smartphone, Target, Users, Github, Linkedin, Mail, Globe, Calendar, Star, Zap } from 'lucide-react';
+import profilePic from '/tamzidislam.jpg'
 import blog from '/blog.png'
 import imranslablms from '/imranslablms.png'
 import munemi from '/munemi.png'
@@ -43,22 +43,22 @@ export const contactLinks = [
 
 
 export const quickFacts = [
-    "🚀 Full-Stack Developer",
+    "👨‍💻 Full-Stack Developer",
     "🌍 Based in Bangladesh",
     "💡 Problem Solver",
     "📚 Lifelong Learner",
-    "☕ Coffee Enthusiast"
+    "🎮 Gamer"
 ];
 
 export const personalInfo = {
-    profilepic: pic,
+    profilepic: profilePic,
     fullName: "Md.Tamzid Islam",
     nickname: "Tamzid",
     location: "Dhaka, Bangladesh",
     occupation: "Software Engineer",
     languages: ["Bengali (Native)", "English (Fluent)", "Hindi (Conversational)"],
     interests: ["Open Source", "Machine Learning", "Mobile Development", "Cloud Computing"],
-    hobbies: ["Photography", "Reading Tech Blogs", "Playing Chess", "Traveling"],
+    hobbies: ["Reading Tech Blogs", "Playing Chess", "Gamming", "Traveling"],
     careerobjective: "I craft digital experiences through code, specializing in modern web technologies. Passionate about building scalable applications that make a difference."
 };
 
@@ -91,10 +91,10 @@ export const skills = [
         description: 'Building robust and scalable server-side applications',
         skills: [
             { name: 'Python', level: 90, experience: '3+ years' },
-            { name: 'Django/DRF', level: 85, experience: '2+ years' },
-            { name: 'FastAPI', level: 80, experience: '1+ years' },
-            { name: 'Node.js', level: 85, experience: '2+ years' },
-            { name: 'Express.js', level: 85, experience: '2+ years' }
+            { name: 'Django/DRF', level: 85, experience: '4+ years' },
+            { name: 'FastAPI', level: 80, experience: '3+ years' },
+            { name: 'Node.js', level: 85, experience: '3+ years' },
+            { name: 'Express.js', level: 85, experience: '3+ years' }
         ]
     },
     {
@@ -103,11 +103,11 @@ export const skills = [
         color: 'text-purple-500',
         description: 'Managing data storage and cloud infrastructure',
         skills: [
-            { name: 'PostgreSQL', level: 85, experience: '2+ years' },
-            { name: 'MongoDB', level: 80, experience: '2+ years' },
+            { name: 'PostgreSQL', level: 85, experience: '4+ years' },
+            { name: 'MongoDB', level: 80, experience: '3+ years' },
             { name: 'AWS', level: 75, experience: '1+ years' },
             { name: 'Docker', level: 80, experience: '1+ years' },
-            { name: 'Redis', level: 70, experience: '1+ years' }
+            { name: 'Redis', level: 70, experience: '6 months' }
         ]
     },
     {
@@ -150,27 +150,35 @@ export const achievements = [
 
 export const timeline = [
     {
-        year: "2024",
-        title: "Senior Full-Stack Developer",
+        year: "2025",
+        title: "Software Engineer",
+        company: "imransLab",
         description: "Leading development of complex web applications with modern tech stacks"
     },
     {
         year: "2023",
-        title: "Full-Stack Developer",
-        description: "Expanded expertise in cloud technologies and microservices architecture"
-    },
-    {
-        year: "2022",
         title: "Frontend Developer",
+        company: "Wreef AI",
         description: "Started professional career with focus on React and modern JavaScript"
     },
     {
+        year: "2022",
+        title: "Freelancer",
+        description: "Worked on various projects building responsive websites and web applications"
+    },
+    {
         year: "2021",
-        title: "Computer Science Student",
+        title: "Started learning progarmming",
         description: "Began learning programming and web development fundamentals"
     }
 ];
 
+export const projectStats = [
+    { label: "Total Projects", value: "20+", icon: Code },
+    { label: "Technologies Used", value: "15+", icon: Zap },
+    { label: "Years Experience", value: "3+", icon: Calendar },
+    { label: "Client Satisfaction", value: "100%", icon: Star }
+];
 
 export const projects = [
     {
@@ -178,7 +186,7 @@ export const projects = [
         title: "Munemi Global",
         shortDescription: "A comprehensive business platform built with modern web technologies",
         fullDescription: "Munemi Global is a full-featured business platform that streamlines operations and enhances customer engagement. Built with a focus on performance and user experience, it features real-time data processing, advanced analytics, and seamless integrations.",
-        image: "/api/placeholder/600/400",
+        image: munemi,
         category: "Business Platform",
         status: "Live",
         year: "2024",
@@ -207,7 +215,7 @@ export const projects = [
             "40% faster page load times",
             "Zero security vulnerabilities"
         ],
-        link: "https://munemiglobal.com",
+        link: "https://www.munemiglobal.com",
         github: "#",
         featured: true
     },
@@ -216,7 +224,7 @@ export const projects = [
         title: "Imranslab Education LMS",
         shortDescription: "A complete Learning Management System with advanced features",
         fullDescription: "A comprehensive Learning Management System designed for educational institutions and online educators. Features include course management, student progress tracking, interactive assignments, and detailed analytics for instructors.",
-        image: "/api/placeholder/600/400",
+        image: imranslablms,
         category: "Education Technology",
         status: "Live",
         year: "2024",
@@ -251,80 +259,80 @@ export const projects = [
     },
     {
         id: 3,
-        title: "Personal Portfolio",
-        shortDescription: "Modern portfolio website showcasing projects and skills",
-        fullDescription: "A modern, responsive portfolio website built to showcase my projects, skills, and professional journey. Features smooth animations, dark/light theme support, and optimized performance.",
-        image: "/api/placeholder/600/400",
-        category: "Personal Brand",
+        title: "Byte-by-Byte",
+        shortDescription: "Interactive coding challenge platform with real-time collaboration",
+        fullDescription: "Byte-by-Byte is an interactive platform where developers can solve coding challenges, participate in pair programming sessions, and track their progress. Features real-time code execution, collaborative editing, and comprehensive analytics.",
+        image: blog,
+        category: "Education Platform",
         status: "Live",
         year: "2024",
-        duration: "2 months",
-        team: "Solo Project",
+        duration: "4 months",
+        team: "Lead Developer",
         technologies: {
-            frontend: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Lucide React"],
-            backend: ["Static Site", "Netlify"],
-            tools: ["Vite", "Git", "Figma", "Lighthouse"]
+            frontend: ["React", "TypeScript", "Monaco Editor", "Socket.io Client", "Tailwind CSS"],
+            backend: ["Node.js", "Express", "Socket.io", "Redis", "PostgreSQL"],
+            tools: ["Docker", "Jest", "Webpack", "NGINX"]
         },
         features: [
-            "Responsive design with mobile-first approach",
-            "Smooth animations and transitions",
-            "Dark/Light theme toggle",
-            "SEO optimized",
-            "Fast loading performance",
-            "Contact form integration"
+            "Real-time collaborative code editing",
+            "Integrated code execution and testing",
+            "Progress tracking and analytics",
+            "Multi-language support (Python, JavaScript, Java)",
+            "User authentication and authorization",
+            "Challenge creation and management"
         ],
         challenges: [
-            "Creating smooth animations without performance impact",
-            "Implementing theme switching functionality",
-            "Optimizing for search engines"
+            "Implementing real-time synchronization without conflicts",
+            "Securing code execution environment",
+            "Handling large-scale WebSocket connections"
         ],
         results: [
-            "100% Lighthouse performance score",
-            "Fully accessible (WCAG compliant)",
-            "Sub-second loading times"
+            "500+ active monthly users",
+            "95% user satisfaction rate",
+            "200ms average real-time sync latency"
         ],
-        link: "https://tizdev.netlify.app",
-        github: "#",
+        link: "https://bytebybyteblog.vercel.app/",
+        github: "https://github.com/tamjidzihan/byte_by_byte",
         featured: false
     },
     {
         id: 4,
-        title: "Task Management API",
-        shortDescription: "RESTful API for task and project management",
-        fullDescription: "A robust RESTful API built with FastAPI for managing tasks and projects. Features include user authentication, real-time updates, file uploads, and comprehensive documentation.",
+        title: "Beakling",
+        shortDescription: "AI-powered language learning app with speech recognition",
+        fullDescription: "Beakling is a modern language learning application that uses AI and speech recognition to help users master new languages. Features personalized learning paths, pronunciation feedback, and immersive conversational practice.",
         image: "/api/placeholder/600/400",
-        category: "Backend Service",
-        status: "Development",
+        category: "EdTech",
+        status: "Live",
         year: "2024",
-        duration: "3 months",
-        team: "Solo Project",
+        duration: "5 months",
+        team: "Full-stack Developer",
         technologies: {
-            frontend: ["Swagger UI", "React Admin Dashboard"],
-            backend: ["FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "Alembic"],
-            tools: ["Docker", "Redis", "Celery", "pytest"]
+            frontend: ["Vue.js", "Vuetify", "Web Speech API", "Wave.js"],
+            backend: ["Python", "FastAPI", "OpenAI API", "MongoDB", "Celery"],
+            tools: ["Docker", "Kubernetes", "GCP", "GitLab CI/CD"]
         },
         features: [
-            "Complete CRUD operations for tasks",
-            "User authentication with JWT",
-            "Real-time notifications",
-            "File upload and management",
-            "Automated API documentation",
-            "Background task processing"
+            "Real-time speech recognition and feedback",
+            "AI-powered conversation practice",
+            "Personalized learning curriculum",
+            "Progress analytics and insights",
+            "Multi-language support (8 languages)",
+            "Mobile-responsive design"
         ],
         challenges: [
-            "Implementing efficient database relationships",
-            "Setting up background task processing",
-            "Creating comprehensive API documentation"
+            "Integrating multiple speech recognition APIs",
+            "Reducing latency in real-time audio processing",
+            "Creating accurate pronunciation scoring algorithms"
         ],
         results: [
-            "99.9% API uptime",
-            "Sub-100ms response times",
-            "Comprehensive test coverage (95%)"
+            "10,000+ registered users",
+            "40% improvement in learning efficiency",
+            "4.8/5 app store rating"
         ],
-        link: "#",
+        link: "https://beakling.com",
         github: "#",
         featured: false
-    }
+    },
 ];
 
 

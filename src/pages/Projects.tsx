@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { projects } from '@/data';
+import { projects, projectStats } from '@/data';
 
 const Projects = () => {
   const containerVariants = {
@@ -26,12 +26,7 @@ const Projects = () => {
     }
   };
 
-  const stats = [
-    { label: "Total Projects", value: "20+", icon: Code },
-    { label: "Technologies Used", value: "15+", icon: Zap },
-    { label: "Years Experience", value: "3+", icon: Calendar },
-    { label: "Client Satisfaction", value: "100%", icon: Star }
-  ];
+
 
   const featuredProjects = projects.filter(project => project.featured);
   const otherProjects = projects.filter(project => !project.featured);
@@ -58,7 +53,7 @@ const Projects = () => {
           {/* Stats */}
           <motion.div variants={itemVariants}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat, index) => {
+              {projectStats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
                   <motion.div
@@ -107,16 +102,23 @@ const Projects = () => {
                       whileHover={{ scale: 1.02 }}
                       className="relative overflow-hidden rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm"
                     >
-                      <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <div className="text-6xl font-bold text-primary/30">
-                          {project.title.split(' ').map(word => word[0]).join('')}
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        className="relative overflow-hidden rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm"
+                      >
+                        <div className="aspect-video">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
-                      </div>
-                      <div className="absolute top-4 right-4">
-                        <Badge variant={project.status === 'Live' ? 'default' : 'secondary'}>
-                          {project.status}
-                        </Badge>
-                      </div>
+                        <div className="absolute top-4 right-4">
+                          <Badge variant={project.status === 'Live' ? 'default' : 'secondary'}>
+                            {project.status}
+                          </Badge>
+                        </div>
+                      </motion.div>
                     </motion.div>
                   </div>
 
@@ -263,17 +265,21 @@ const Projects = () => {
                   <Card className="h-full border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300 group">
                     <div className="relative overflow-hidden rounded-t-lg">
                       <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <div className="text-4xl font-bold text-primary/30">
-                          {project.title.split(' ').map(word => word[0]).join('')}
+                        <div className="aspect-video">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="absolute top-4 right-4">
+                          <Badge variant={project.status === 'Live' ? 'default' : 'secondary'}>
+                            {project.status}
+                          </Badge>
                         </div>
                       </div>
                       <div className="absolute top-4 left-4">
                         <Badge variant="outline">{project.category}</Badge>
-                      </div>
-                      <div className="absolute top-4 right-4">
-                        <Badge variant={project.status === 'Live' ? 'default' : 'secondary'}>
-                          {project.status}
-                        </Badge>
                       </div>
                     </div>
 

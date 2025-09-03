@@ -198,7 +198,8 @@ const About = () => {
                         <div className="flex items-center gap-3 mb-2">
                           <Badge variant="default">{item.year}</Badge>
                         </div>
-                        <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                        <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+                        <p className="text-sm font-semibold mb-2">{item.company}</p>
                         <p className="text-muted-foreground text-sm">{item.description}</p>
                       </CardContent>
                     </Card>

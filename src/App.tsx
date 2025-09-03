@@ -11,6 +11,7 @@ import Projects from './pages/Projects';
 import Resume from './pages/Resume';
 import Blogs from './pages/Blogs';
 import NotFound from './pages/NotFound';
+import ScrollToTop from './components/common/ScrollToTop';
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
         <Toaster />
         <BrowserRouter>
           <div className="min-h-screen bg-background text-foreground">
+            <ScrollToTop />
             <Navbar />
             <main className="pt-16">
               <Routes>
