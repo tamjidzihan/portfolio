@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { projects, projectStats, toolkit } from '@/data';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   const containerVariants = {
@@ -382,10 +383,10 @@ const Projects = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg">
-                    <a href="mailto:tamjidzihan@gmail.com" className="flex items-center gap-2">
+                    <Link to={'/contact'} className="flex items-center gap-2">
                       Start a Project
                       <ArrowRight className="h-4 w-4" />
-                    </a>
+                    </Link>
                   </Button>
                   <Button variant="outline" size="lg" asChild>
                     <a href="/resume" className="flex items-center gap-2">

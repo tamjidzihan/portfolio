@@ -41,10 +41,6 @@ export const contactLinks = [
     }
 ];
 
-
-
-
-
 export const quickFacts = [
     "👨‍💻 Full-Stack Developer",
     "🌍 Based in Bangladesh",
@@ -55,7 +51,7 @@ export const quickFacts = [
 
 export const personalInfo = {
     profilepic: profilePic,
-    fullName: "Md.Tamzid Islam Zihan",
+    fullName: "Tamzid Islam Zihan",
     nickname: "Tamzid",
     location: "Dhaka, Bangladesh",
     occupation: "Software Engineer",
@@ -505,15 +501,15 @@ export const socialLinks = [
     {
         icon: Linkedin,
         label: 'LinkedIn',
-        value: 'linkedin.com/in/tamjid-islam',
-        href: 'https://linkedin.com/in/tamjid-islam',
+        value: 'linkedin.com/in/tamzid-islam/',
+        href: 'https://www.linkedin.com/in/tamzid-islam/',
         description: 'Professional network'
     },
     {
         icon: Github,
         label: 'GitHub',
-        value: 'github.com/tamzid-islam',
-        href: 'https://github.com/tamzid-islam',
+        value: 'github.com/tamjidzihan',
+        href: 'https://github.com/tamjidzihan',
         description: 'Code repositories'
     },
     {

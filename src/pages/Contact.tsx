@@ -19,8 +19,6 @@ const Contact = () => {
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-
-
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
