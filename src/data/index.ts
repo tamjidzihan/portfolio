@@ -55,7 +55,7 @@ export const quickFacts = [
 
 export const personalInfo = {
     profilepic: profilePic,
-    fullName: "Md.Tamzid Islam",
+    fullName: "Md.Tamzid Islam Zihan",
     nickname: "Tamzid",
     location: "Dhaka, Bangladesh",
     occupation: "Software Engineer",
