@@ -339,6 +339,29 @@ export const projects = [
 
 ];
 
+export const toolkit = [
+    {
+        category: "Frontend",
+        technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"],
+        color: "from-blue-500 to-cyan-500"
+    },
+    {
+        category: "Backend",
+        technologies: ["Node.js", "Python", "Django", "FastAPI", "Express.js"],
+        color: "from-green-500 to-emerald-500"
+    },
+    {
+        category: "Database",
+        technologies: ["PostgreSQL", "MongoDB", "Redis", "SQLite", "Prisma"],
+        color: "from-purple-500 to-pink-500"
+    },
+    {
+        category: "Tools & Cloud",
+        technologies: ["AWS", "Docker", "Git", "VS Code", "Postman"],
+        color: "from-orange-500 to-red-500"
+    }
+]
+
 
 export const resumeData = {
     personalInfo: {

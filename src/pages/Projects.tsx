@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { projects, projectStats } from '@/data';
+import { projects, projectStats, toolkit } from '@/data';
 
 const Projects = () => {
   const containerVariants = {
@@ -273,13 +273,13 @@ const Projects = () => {
                           />
                         </div>
                         <div className="absolute top-4 right-4">
-                          <Badge variant={project.status === 'Live' ? 'default' : 'secondary'}>
+                          <Badge variant={project.status === 'Live' ? 'default' : 'destructive'}>
                             {project.status}
                           </Badge>
                         </div>
                       </div>
                       <div className="absolute top-4 left-4">
-                        <Badge className=' bg-white' variant="outline">{project.category}</Badge>
+                        <Badge className=' bg-white dark:bg-black' variant="outline">{project.category}</Badge>
                       </div>
                     </div>
 
@@ -342,28 +342,7 @@ const Projects = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {[
-                {
-                  category: "Frontend",
-                  technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"],
-                  color: "from-blue-500 to-cyan-500"
-                },
-                {
-                  category: "Backend",
-                  technologies: ["Node.js", "Python", "Django", "FastAPI", "Express.js"],
-                  color: "from-green-500 to-emerald-500"
-                },
-                {
-                  category: "Database",
-                  technologies: ["PostgreSQL", "MongoDB", "Redis", "SQLite", "Prisma"],
-                  color: "from-purple-500 to-pink-500"
-                },
-                {
-                  category: "Tools & Cloud",
-                  technologies: ["AWS", "Docker", "Git", "VS Code", "Postman"],
-                  color: "from-orange-500 to-red-500"
-                }
-              ].map((tech, index) => (
+              {toolkit.map((tech, index) => (
                 <motion.div
                   key={tech.category}
                   initial={{ opacity: 0, y: 20 }}
