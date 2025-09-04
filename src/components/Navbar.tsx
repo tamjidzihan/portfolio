@@ -16,6 +16,7 @@ const Navbar = () => {
     { name: 'Projects', path: '/projects' },
     { name: 'Resume', path: '/resume' },
     { name: 'Blogs', path: '/blogs' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   const toggleTheme = () => {
@@ -52,11 +53,10 @@ const Navbar = () => {
                 >
                   <Link
                     to={item.path}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                      location.pathname === item.path
-                        ? 'text-primary bg-primary/10'
-                        : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
-                    }`}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${location.pathname === item.path
+                      ? 'text-primary bg-primary/10'
+                      : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -113,11 +113,10 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    location.pathname === item.path
-                      ? 'text-primary bg-primary/10'
-                      : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
-                  }`}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${location.pathname === item.path
+                    ? 'text-primary bg-primary/10'
+                    : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

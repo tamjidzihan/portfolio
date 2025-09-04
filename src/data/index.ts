@@ -1,4 +1,4 @@
-import { Coffee, Code2, Sparkles, Award, Code, Database, Heart, Server, Smartphone, Target, Users, Github, Linkedin, Mail, Globe, Calendar, Star, Zap } from 'lucide-react';
+import { Coffee, Code2, Sparkles, Award, Code, Database, Heart, Server, Smartphone, Target, Users, Github, Linkedin, Mail, Globe, Calendar, Star, Zap, Briefcase, MapPin, Phone } from 'lucide-react';
 import profilePic from '/tamzidislam.jpg'
 import blog from '/blog.png'
 import imranslablms from '/imranslablms.png'
@@ -470,4 +470,87 @@ export const blogPosts = [
         tags: ["Javascript", "Deno", "Node.js", "Development"],
         published: false
     }
+];
+
+
+
+export const contactInfo = [
+    {
+        icon: Mail,
+        label: 'Email',
+        value: 'tamjidzihan@gmail.com',
+        href: 'mailto:tamjidzihan@gmail.com',
+        description: 'Professional inquiries welcome',
+        availability: '24/7'
+    },
+    {
+        icon: Phone,
+        label: 'Phone',
+        value: '+880 1746-963565',
+        href: 'tel:+8801234567890',
+        description: 'Business hours preferred',
+        availability: '9 AM - 6 PM (GMT+6)'
+    },
+    {
+        icon: MapPin,
+        label: 'Location',
+        value: 'Dhaka, Bangladesh',
+        href: '#',
+        description: 'Remote work available globally',
+        availability: 'Flexible timezone'
+    }
+];
+
+export const socialLinks = [
+    {
+        icon: Linkedin,
+        label: 'LinkedIn',
+        value: 'linkedin.com/in/tamjid-islam',
+        href: 'https://linkedin.com/in/tamjid-islam',
+        description: 'Professional network'
+    },
+    {
+        icon: Github,
+        label: 'GitHub',
+        value: 'github.com/tamzid-islam',
+        href: 'https://github.com/tamzid-islam',
+        description: 'Code repositories'
+    },
+    {
+        icon: Globe,
+        label: 'Portfolio',
+        value: 'tizdev.netlify.app',
+        href: 'https://tizdev.netlify.app',
+        description: 'Live projects showcase'
+    }
+];
+
+export const businessInfo = [
+    {
+        icon: Award,
+        title: 'Experience Level',
+        value: '3+ Years',
+        description: 'Professional development experience'
+    },
+    {
+        icon: Users,
+        title: 'Clients Served',
+        value: '20+',
+        description: 'Successful project deliveries'
+    },
+    {
+        icon: Briefcase,
+        title: 'Project Types',
+        value: 'Web & Mobile',
+        description: 'Full-stack applications'
+    }
+];
+
+export const services = [
+    'Full-Stack Web Development',
+    'React & TypeScript Applications',
+    'Backend API Development',
+    'Database Design & Optimization',
+    'Cloud Deployment & DevOps',
+    'Technical Consulting'
 ];
