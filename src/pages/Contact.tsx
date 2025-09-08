@@ -1,44 +1,13 @@
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Clock, CheckCircle, Calendar, Globe, Linkedin, Github, Award, Users, Briefcase } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Badge } from '@/components/ui/badge';
-import { useState } from 'react';
-import { businessInfo, contactInfo, services, socialLinks } from '@/data';
 import AnimatedBackground from '@/components/common/AnimatedBackground';
+import ContactForm from '@/components/Contact/ContactForm';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { businessInfo, contactInfo, services, socialLinks } from '@/data';
+import { motion } from 'framer-motion';
+import { CheckCircle, Clock, Globe, Mail } from 'lucide-react';
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-    const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Simulate form submission
-        setIsSubmitted(true);
-        setTimeout(() => setIsSubmitted(false), 3000);
-
-        // Create mailto link with form data
-        const subject = encodeURIComponent(formData.subject || 'Contact from Portfolio');
-        const body = encodeURIComponent(
-            `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-        );
-        window.location.href = `mailto:tamjidzihan@gmail.com?subject=${subject}&body=${body}`;
-    };
 
     return (
         <div className="min-h-screenok">
@@ -98,104 +67,11 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* Contact Form & Info */}
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-16">
                         {/* Contact Form */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-                                <CardHeader>
-                                    <CardTitle className="text-2xl flex items-center gap-3">
-                                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 flex items-center justify-center border border-blue-500/20">
-                                            <Send className="w-6 h-6 text-primary" />
-                                        </div>
-                                        Send Message
-                                    </CardTitle>
-                                    <p className="text-muted-foreground">
-                                        Fill out the form below and I'll get back to you within 24 hours.
-                                    </p>
-                                </CardHeader>
-                                <CardContent>
-                                    {isSubmitted ? (
-                                        <motion.div
-                                            initial={{ opacity: 0, scale: 0.8 }}
-                                            animate={{ opacity: 1, scale: 1 }}
-                                            className="text-center py-8"
-                                        >
-                                            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                                            <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
-                                            <p className="text-muted-foreground">
-                                                Thank you for reaching out. I'll respond to your message soon.
-                                            </p>
-                                        </motion.div>
-                                    ) : (
-                                        <form onSubmit={handleSubmit} className="space-y-6">
-                                            <div className="grid sm:grid-cols-2 gap-4">
-                                                <div className="space-y-2">
-                                                    <Label htmlFor="name">Full Name *</Label>
-                                                    <Input
-                                                        id="name"
-                                                        name="name"
-                                                        value={formData.name}
-                                                        onChange={handleInputChange}
-                                                        placeholder="Your full name"
-                                                        required
-                                                        className="bg-background/50"
-                                                    />
-                                                </div>
-                                                <div className="space-y-2">
-                                                    <Label htmlFor="email">Email Address *</Label>
-                                                    <Input
-                                                        id="email"
-                                                        name="email"
-                                                        type="email"
-                                                        value={formData.email}
-                                                        onChange={handleInputChange}
-                                                        placeholder="your.email@example.com"
-                                                        required
-                                                        className="bg-background/50"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="space-y-2">
-                                                <Label htmlFor="subject">Subject *</Label>
-                                                <Input
-                                                    id="subject"
-                                                    name="subject"
-                                                    value={formData.subject}
-                                                    onChange={handleInputChange}
-                                                    placeholder="What's this about?"
-                                                    required
-                                                    className="bg-background/50"
-                                                />
-                                            </div>
-                                            <div className="space-y-2">
-                                                <Label htmlFor="message">Message *</Label>
-                                                <Textarea
-                                                    id="message"
-                                                    name="message"
-                                                    value={formData.message}
-                                                    onChange={handleInputChange}
-                                                    placeholder="Tell me about your project, timeline, and any specific requirements..."
-                                                    rows={6}
-                                                    required
-                                                    className="bg-background/50 resize-none"
-                                                />
-                                            </div>
-                                            <Button type="submit" size="lg" className="w-full group">
-                                                <Send className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                                                Send Message
-                                            </Button>
-                                        </form>
-                                    )}
-                                </CardContent>
-                            </Card>
-                        </motion.div>
+                        <ContactForm />
 
                         {/* Contact Info & Services */}
                         <motion.div
@@ -258,6 +134,7 @@ const Contact = () => {
                                 </CardContent>
                             </Card>
                         </motion.div>
+
                         {/* Social Media & Professional Links */}
                         <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
                             <CardHeader>
@@ -333,7 +210,6 @@ const Contact = () => {
                                 </div>
                             </CardContent>
                         </Card>
-
                     </div>
                 </div>
             </section>
