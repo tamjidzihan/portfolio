@@ -144,7 +144,9 @@ const Home = () => {
                       />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold"> {personalInfo.fullName}</h3>
+                      <Link to={'/about'}>
+                        <h3 className="text-xl font-semibold hover:underline decoration-1"> {personalInfo.fullName}</h3>
+                      </Link>
                       <p className="text-muted-foreground text-indigo-600 dark:text-indigo-400 "> {personalInfo.occupation}</p>
                     </div>
                     <Link to={'/resume'} className="flex justify-center gap-2">
@@ -185,12 +187,13 @@ const Home = () => {
                     Currently Working On
                   </h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Building <span className="font-medium">Byte-by-Byte</span>, a tech blog using Next.js, TypeScript & Tailwind</li>
+                    <li>• Building <span className="font-medium">Beakling</span>, a modern ecom website using React, Vite, TypeScript & Tailwind</li>
                     <li>• Developing <span className="font-medium">Storefront</span>, an e-commerce backend with Django REST & PostgreSQL</li>
                     <li>• Freelance projects with React, Vite, TypeScript, and Firebase</li>
                     <li>• Exploring cloud deployment & CI/CD workflows (GitHub Actions, VPS hosting)</li>
                     <li>• Learning advanced system design & scalable backend patterns</li>
                   </ul>
+
                 </CardContent>
               </Card>
 
