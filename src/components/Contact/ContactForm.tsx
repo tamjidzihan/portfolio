@@ -34,19 +34,17 @@ const ContactForm = () => {
         setIsLoading(true);
 
         try {
-            await fetch(
-                scriptUrl,
-                {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'text/plain;charset=utf-8',
-                    },
-                    body: JSON.stringify(formData),
-                }
-            );
+            await fetch(scriptUrl, {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                mode: "no-cors",
+            });
             setIsSubmitted(true);
-            setFormData({ name: '', email: '', subject: '', message: '' });
+            setFormData({ name: "", email: "", subject: "", message: "" });
+
         } catch (error) {
             console.error('Error submitting form:', error);
         } finally {
