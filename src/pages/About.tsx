@@ -52,12 +52,11 @@ const About = () => {
               <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold">
-                      <Avatar>
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                      <Avatar className='w-14 h-14'>
                         <AvatarImage src={personalInfo.profilepic} alt="@tamjidzihan" />
                         <AvatarFallback>TI</AvatarFallback>
                       </Avatar>
-
                     </div>
                     Personal Details
                   </CardTitle>
