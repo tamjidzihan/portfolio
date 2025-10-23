@@ -4,6 +4,7 @@ import blog from '/blog.png'
 import imranslablms from '/imranslablms.png'
 import munemi from '/munemi.png'
 import beakling from '/beakling.png'
+import fitfrenzy from '/fitfrenzy.png'
 import resume from '../Assets/MD.Tamzid_Islam.pdf'
 
 
@@ -331,7 +332,51 @@ export const projects = [
         link: "https://www.beakling.com",
         github: "#",
         featured: false
-    }
+    },
+    {
+        id: 2,
+        title: "Fit-Frenzy",
+        shortDescription: "Modern challenge tracking platform with real-time progress monitoring and social features",
+        fullDescription: "Fit-Frenzy is a comprehensive platform that enables users to create, join, and track personal and group challenges. Built with modern React and Firebase, it features real-time progress tracking, social interactions, competitive elements, and detailed analytics to help users stay motivated and achieve their goals.",
+        image: fitfrenzy,
+        category: "Productivity & Fitness",
+        status: "Live",
+        year: "2024",
+        duration: "3 months",
+        team: "Solo Project",
+        technologies: {
+            frontend: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "React Router DOM", "Lucide React"],
+            backend: ["Firebase", "Firebase Auth", "Firebase Realtime Database", "Netlify Hosting"],
+            tools: ["Git", "VS Code", "Chrome DevTools", "Firebase CLI", "Vite"]
+        },
+        features: [
+            "Real-time challenge progress tracking",
+            "Social features with friend challenges and invitations",
+            "Interactive dashboard with animated statistics",
+            "Custom challenge creation with flexible tracking fields",
+            "Progress visualization with charts and analytics",
+            "Mobile-responsive design with modern UI/UX",
+            "Push notifications and activity feeds",
+            "Competitive elements with leaderboards and streaks"
+        ],
+        challenges: [
+            "Implementing real-time data synchronization across multiple users",
+            "Designing scalable database structure for challenge participation data",
+            "Creating responsive UI components with smooth animations",
+            "Handling complex state management for challenge progress tracking",
+            "Optimizing performance for large datasets of challenge entries"
+        ],
+        results: [
+            "Successfully deployed with netlify hosting",
+            "Smooth real-time updates across all connected clients",
+            "Excellent mobile responsiveness and user experience",
+            "Fast loading times with optimized bundle size",
+            "Intuitive user interface with modern design patterns"
+        ],
+        link: "https://fitfrenzy.netlify.app/",
+        github: "https://github.com/tamjidzihan/fit-challenge.git",
+        featured: true
+    },
 
 ];
 
